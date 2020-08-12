@@ -1,1 +1,1 @@
-aws --profile=pnd-prod s3 sync build/ s3://www.appsfactory.dev/
+aws --profile=pnd-prod s3 sync public/ s3://www.appsfactory.dev/

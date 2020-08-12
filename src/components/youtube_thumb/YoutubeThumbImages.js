@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // const {promisify} = require("es6-promisify");
 // const imageExists = require('image-exists');
 // const imageExistsP = promisify(imageExists);
-import DownloadImgBtn from '../../lib/DownloadImgBtn';
+import DownloadImgBtn from './DownloadImgBtn';
 
 export default class YoutubeThumbImages extends Component {
   // checkImages = async () => {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
+import { Link } from "gatsby";
 import { FaCode } from 'react-icons/fa'
 
 export default class Footer extends Component {
@@ -42,15 +42,13 @@ export default class Footer extends Component {
                 </Link>
               </li>
               <li>
-                <Link className="text-muted" to="/about/">
-                  About AppsFactory
-                </Link>
-              </li>
-              <li>
               <Link className="text-muted" to="/about/">About</Link>
               </li>
               <li>
                 <Link className="text-muted" to="/terms/">Terms</Link>
+              </li>
+              <li>
+              <Link className="text-muted" to="/privacy_policy/">Privacy Policy</Link>
               </li>
             </ul>
           </div>
