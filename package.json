@@ -3,18 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "faker": "^4.1.0",
-    "immutable": "^4.0.0-rc.12",
-    "jquery": "^1.9.1",
-    "json-tree-view": "^0.4.10",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-json-tree": "^0.11.2",
-    "react-json-view": "^1.19.1",
-    "react-scripts": "2.1.8",
-    "reactstrap": "^8.0.0",
-    "relaxed-json": "^1.0.3"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "bootstrap": "^4.5.0",
+    "es6-promisify": "^6.1.1",
+    "get-youtube-id": "^1.0.1",
+    "image-exists": "^1.1.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "youtube-iframe": "^1.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,10 +28,16 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
