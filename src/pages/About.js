@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from "gatsby";
-import { FaInfoCircle, FaYoutube } from 'react-icons/fa';
+import { FaInfoCircle } from 'react-icons/fa';
 import ColOneMidShrink from '../components/layouts/col_one_mid_shrink'
+import IntroHelper from '../components/tools_intro/intro_helper_about'
 import Metatags from '../components/seo/meta_tags'
 
 export default class About extends Component {
@@ -27,18 +27,18 @@ export default class About extends Component {
             <p>On this page, we list down the apps developed by us.</p>
           </div>
 
-          <div className="card my-2">
-            <div className="card-body">
-              <h5 className="card-title">Youtube Video Thumbnail Downloader</h5>
-              <h6 className="card-subtitle mb-2 text-muted">Youtube Tool</h6>
-              <p className="card-text">This tool is used to download youtube video's image or thumbnails. User provideds youtube url, and this tool gives you 4-5 different size image, which you can use in your portal or app.</p>
-
-              See youtube video image downloader in action.<br/>
-              <Link className="btn btn-primary btn-lg" to="/youtube-thumbnail/">
-                <FaYoutube /> Youtube Thumbnail Downloader
-              </Link>
-            </div>
-          </div>
+          <IntroHelper 
+            title="Youtube Thumbnail Downloader"
+            sub_title="Youtube Tool"
+            description="This tool is used to download youtube video's image or thumbnails. User provideds youtube url, and this tool gives you 4-5 different size image, which you can use in your portal or app."
+            url="/youtube-thumbnail/"
+            />
+          <IntroHelper 
+            title="Cron Expression Evaluator and Generator"
+            sub_title="Cron Generator Tool"
+            description="This is used to generate cron expressions, and evaluate cron expressions."
+            url="/cron-expression-evaluator/"
+            />
         </ColOneMidShrink>
       </>
     )

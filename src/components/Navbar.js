@@ -16,7 +16,10 @@ export default class Navbar extends Component {
             <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/youtube-thumbnail/">Youtube Video Image</Link>
+            <Link className="nav-link" to="/youtube-thumbnail/">Youtube Thumbnail Tool</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/cron-expression-evaluator/">Cron Tool</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/about/">About</Link>

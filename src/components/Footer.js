@@ -22,9 +22,9 @@ export default class Footer extends Component {
             <h5>Resources</h5>
             <ul className="list-unstyled text-small">
               <li>
-                <Link className="text-muted" to="https://www.gyanblog.com" target="_blank" rel="noopener noreferrer">
+                <a className="text-muted" href="https://www.gyanblog.com" target="_blank" rel="noopener noreferrer">
                   GyanBlog.com
-                </Link>
+                </a>
               </li>
               <li>
                 <Link className="text-muted" to="/contact/">

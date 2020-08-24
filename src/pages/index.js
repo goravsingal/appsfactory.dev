@@ -1,12 +1,12 @@
 import React from "react"
-import { FaRegFutbol, FaYoutube } from 'react-icons/fa';
+import { FaRegFutbol } from 'react-icons/fa';
 // import "bootstrap/dist/css/bootstrap.min.css";
 import '../styles/app.css'
 // import 'bootstrap/dist/js/bootstrap.min.js';
 
-import { Link } from "gatsby";
 import ColOneMidShrink from '../components/layouts/col_one_mid_shrink'
 import Metatags from '../components/seo/meta_tags'
+import IntroHelperIndex from '../components/tools_intro/intro_helper_index'
 
 export default function Home() {
   return (
@@ -30,18 +30,18 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="media">
-          <img class="mr-3" src="/youtube_logo.png" alt="Youtube thumbnail"></img>
-          <div className="media-body">
-            <h3 className="mt-0">Youtube Thumbnail Extractor</h3>
-            <p className="lead">
-              Download youtube thumbnail images from Youtube video. Just put the URL of any youtube video, and see various resolution of images.
-            </p>
-            <Link className="btn btn-primary btn-lg" to="/youtube-thumbnail/">
-              <FaYoutube /> Youtube Thumbnail Downloader
-            </Link>
-          </div>
-        </div>
+        <IntroHelperIndex 
+          title="Youtube Thumbnail Extractor"
+          image="/youtube_logo.png"
+          link="/youtube-thumbnail/"
+          description="Download youtube thumbnail images from Youtube video. Just put the URL of any youtube video, and see various resolution of images."
+          />
+        <IntroHelperIndex 
+          title="Cron Expression Evaluator tool"
+          image="/cron_tool.png"
+          link="/cron-expression-evaluator/"
+          description="Evaluate your cron expressions. Also helps you in understanding meaning of an expression. Generate expressions."
+          />
       </ColOneMidShrink>
     </>
   )

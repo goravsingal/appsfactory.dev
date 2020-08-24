@@ -4,16 +4,15 @@ import DefaultSiteData from '../../data/site_constants'
 
 export default class MetaTags extends Component {
   render() {
-    const title = this.props.title;
+    const title = `${this.props.title} | ${DefaultSiteData.websiteName}`;
     const href = `${DefaultSiteData.siteUrl}${this.props.pathname}`
     
     //relative path of image
     const ogImage = `${DefaultSiteData.siteUrl}${this.props.ogImage}`;
     // const ogImageAlt = this.props.ogImageAlt ? this.props.ogImageAlt : title;
-
     return (
       <Helmet defer={false}>
-        <title>{title} | {DefaultSiteData.websiteName}</title>
+        <title>{title}</title>
         <meta name="description" content={this.props.description} />
         <meta name="image" content={ogImage} />
 
