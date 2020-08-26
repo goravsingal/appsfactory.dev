@@ -36,7 +36,7 @@ const EveryMinHourTypeData = {
   'Hour': {
     preLabel: 'Every',
     postLabel: 'Hour',
-    maxNumber: 12,
+    maxNumber: 24,
     widgetType: 'text',
     defaultName: 'Every 1 Hour',
     expr: cronTime.every(1).hours(),
@@ -58,7 +58,7 @@ const EveryMinHourTypeData = {
   'EveryDayAt': {
     preLabel: 'Every Day At',
     postLabel: 'Hour',
-    maxNumber: 12,
+    maxNumber: 24,
     widgetType: 'text',
     defaultName: 'Every Day at 1 Hour',
     expr: cronTime.everyDayAt(1),
@@ -86,4 +86,37 @@ const EveryMinHourTypeData = {
   }
 };
 
-module.exports = { example_cron_expr, EveryMinHourTypeData };
+const EveryWeekYearMonthTypeData = {
+  'EveryWeekdayAt': {
+    preLabel: 'Every',
+    maxNumber: 7,
+    widgetType: 'options',
+    defaultName: 'Every Monday at 0:0',
+    expr: cronTime.everyMondayAt(0, 0),
+    secondary_options: {
+      hourField: {
+        label: 'Hour',
+        maxNumber: 24
+      },
+      minuteField: {
+        label: 'Minute',
+        maxNumber: 60
+      }
+    },
+    options: [
+      {dayNum: 1, name: 'Monday', func: cronTime.everyMondayAt},
+      {dayNum: 2, name: 'Tuesday', func: cronTime.everyTuesdayAt},
+      {dayNum: 3, name: 'Wednesday', func: cronTime.everyWednesdayAt},
+      {dayNum: 4, name: 'Thursday', func: cronTime.everyThursdayAt},
+      {dayNum: 5, name: 'Friday', func: cronTime.everyFridayAt},
+      {dayNum: 6, name: 'Saturday', func: cronTime.everySaturdayAt},
+      {dayNum: 7, name: 'Sunday', func: cronTime.everySundayAt}
+    ]
+  },
+}
+
+module.exports = { 
+  example_cron_expr, 
+  EveryMinHourTypeData,
+  EveryWeekYearMonthTypeData
+};

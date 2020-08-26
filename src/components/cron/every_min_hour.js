@@ -21,7 +21,7 @@ export default class EveryMinHour extends Component {
     return (
       <>
       <div className="form-group row">
-        <label className="col-sm-2">{this.state.config.preLabel}</label>
+        <label className="col-sm-4">{this.state.config.preLabel}</label>
         <div className="col-sm-3">
           {this.state.config.widgetType === 'text' &&
             <input type="form-text text" className="form-control" 
@@ -39,7 +39,7 @@ export default class EveryMinHour extends Component {
             </select>
           }
         </div>
-        <label className="col-sm-2">{this.state.config.postLabel}</label>
+        <label className="col-sm-3">{this.state.config.postLabel}</label>
         <div className="col-sm-2">
           <button type="button" className="btn btn-primary text-right"
             onClick={() => {this.props.setItem({
@@ -64,7 +64,7 @@ export default class EveryMinHour extends Component {
     }
     this.setState({
       value: e.target.value,
-      name: this.state.config.preLabel + ' ' + e.target.value + ' ' + this.state.config.postLabel,
+      name: this.state.config.preLabel + ' ' + selectedOption.name + ' ' + this.state.config.postLabel,
       expr: selectedOption.func()
     });
   }
